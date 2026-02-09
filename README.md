@@ -26,7 +26,7 @@ ExpertiseHS est un outil conçu pour **Expertise Humanitaire et Sociale**, une o
 - **Services administratifs** : budgets, contrats, logistique des missions et conformité.
 - **Partenaires, bailleurs et organisations clientes** (UNICEF, OIM, PAM, etc.) : reporting, indicateurs et rapports d'impact.
 
-En résumé, ExpertiseHS accompagne **Expertise Humanitaire et Sociale** dans la conduite de ses projets d'expertise et de ses missions pour organisations externes, tout en respectant les exigences d'une structure à but non lucratif (bailleurs, impact social, bénéficiaires, redevabilité).
+En résumé, ExpertiseHS (Expertise Humanitaire et Sociale) accompagne l'organisation dans la conduite de leurs projets dans leurs domaines d'expertise et de ses missions pour organisations externes, tout en respectant les exigences d'une structure à but non lucratif (bailleurs, impact social, bénéficiaires, redevabilité).
 
 ---
 
