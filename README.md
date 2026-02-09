@@ -35,7 +35,7 @@ En résumé, ExpertiseHS accompagne **Expertise Humanitaire et Sociale** dans la
 | ------------------------------ | -------------------------------------------------------------------------------------------------------- |
 | **Entités organisationnelles** | Organisation, Structure (filiales, branches, antennes), Département/Direction, Partenaire institutionnel |
 | **Projets d'expertise**        | Projet, Domaine d'expertise, Phase de projet, Livrable                                                   |
-| **Missions d'expertise**       | Mission autonome (évaluation, étude, VBG, mi-parcours…), participants, activités, livrables              |
+| **Missions d'expertise**       | Mission (évaluation, étude, VBG, mi-parcours…), participants, activités, livrables                       |
 | **Ressources humaines**        | Employé/Collaborateur, Expert (interne/externe), Compétence/Spécialité, Rôle dans les projets            |
 | **Gestion des connaissances**  | Ressource documentaire, Bonne pratique, Leçon apprise, Bibliothèque de modèles                           |
 | **Financement et budget**      | Donateur/Bailleur, Contrat de financement, Budget projet, Ligne budgétaire                               |
@@ -57,6 +57,7 @@ En résumé, ExpertiseHS accompagne **Expertise Humanitaire et Sociale** dans la
 ## Base de données
 
 Le schéma est défini dans `database/schema.sql` :
+
 - **Moteur** : PostgreSQL
 - **Clés primaires** : UUID
 - **Langue** : anglais (tables et colonnes)
