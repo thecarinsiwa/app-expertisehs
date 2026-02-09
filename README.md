@@ -1,31 +1,32 @@
 # ExpertiseHS
 
-**Expertise Humanitaire et Sociale** — Plateforme de gestion des projets d'expertise technique à impact social, avec une branche à but non lucratif.
+**Expertise Humanitaire et Sociale** — L'expertise humanitaire et sociale regroupe les savoirs professionnels nécessaires pour répondre aux crises et à l'exclusion. Elle s'articule autour de deux volets principaux : l'humanitaire, qui intervient dans l'urgence (catastrophes, conflits) pour sauver des vies et protéger les populations, et le social, qui agit sur le long terme contre les vulnérabilités et pour l'inclusion. Cette expertise requiert à la fois des compétences techniques (gestion de projet, droit humanitaire, logistique) et des qualités humaines (résilience, adaptabilité interculturelle, éthique). Le secteur est marqué par des enjeux contemporains comme la professionnalisation, la coordination entre acteurs, et la recherche d'un équilibre entre réponse d'urgence et développement durable. Aujourd'hui, il tend vers une plus grande redevabilité et un renforcement des capacités locales.
 
 ---
 
 ## Le projet
 
-ExpertiseHS est un outil conçu pour **Expertise Humanitaire et Sociale**, une organisation qui mène des projets d'expertise technique dans les domaines humanitaires et sociaux. La plateforme permet de piloter l'ensemble du cycle de vie des projets : de l'identification des besoins et du montage financier jusqu'à la réalisation des missions, au suivi des livrables et à l'évaluation d'impact.
+ExpertiseHS est un outil conçu pour **Expertise Humanitaire et Sociale**, une organisation qui mène des projets d'expertise technique et des missions d'expertise dans les domaines humanitaires et sociaux. La plateforme permet de piloter le cycle de vie des projets (identification des besoins, montage financier, phases, livrables, gouvernance, évaluation d'impact) et de gérer les missions menées pour des organisations externes (UNICEF, OIM, PAM, etc.) — évaluations, études, formations, missions VBG, revues mi-parcours, etc.
 
 ### Objectifs
 
-- **Centraliser** les informations sur les projets, les experts, les bailleurs et les zones d'intervention.
-- **Structurer** la gouvernance (comités de pilotage, réunions, points d'avancement) et la traçabilité des décisions.
+- **Centraliser** les informations sur les projets, les missions d'expertise, les experts, les bailleurs, les organisations partenaires et les zones d'intervention.
+- **Structurer** la gouvernance des projets (comités de pilotage, réunions, points d'avancement) et la traçabilité des décisions.
 - **Piloter** les budgets, les contrats de financement et les lignes budgétaires par projet.
+- **Gérer les missions d'expertise** autonomes pour organisations externes (UNICEF, OIM, PAM, etc.) : participants, activités, livrables.
 - **Organiser** la logistique des missions (déplacements, hébergements, équipements) et la gestion des parties prenantes (bénéficiaires, contacts locaux, institutions partenaires).
 - **Capitaliser** les connaissances (bonnes pratiques, leçons apprises, modèles) et valoriser les résultats (indicateurs, évaluations, témoignages, rapports d'impact).
 - **Communiquer** sur les actions (actualités, publications, médias, newsletters) et renforcer la visibilité de l'organisation.
 
 ### À qui s'adresse la plateforme ?
 
-- **Directions et départements** : vue d'ensemble des projets, du financement et de l'avancement.
-- **Chefs de projet** : suivi des phases, livrables, missions et parties prenantes.
-- **Experts (internes et externes)** : missions, compétences, rôles et documents de référence.
-- **Services administratifs** : budgets, contrats, logistique et conformité.
-- **Partenaires et bailleurs** : reporting, indicateurs et rapports d'impact.
+- **Directions et départements** : vue d'ensemble des projets, des missions d'expertise, du financement et de l'avancement.
+- **Chefs de projet** : suivi des phases, livrables et parties prenantes des projets.
+- **Experts (internes et externes)** : missions d'expertise, projets, compétences, rôles et documents de référence.
+- **Services administratifs** : budgets, contrats, logistique des missions et conformité.
+- **Partenaires, bailleurs et organisations clientes** (UNICEF, OIM, PAM, etc.) : reporting, indicateurs et rapports d'impact.
 
-En résumé, ExpertiseHS accompagne **Expertise Humanitaire et Sociale** dans la conduite de ses projets d'expertise, tout en respectant les exigences d'une structure à but non lucratif (bailleurs, impact social, bénéficiaires, redevabilité).
+En résumé, ExpertiseHS accompagne **Expertise Humanitaire et Sociale** dans la conduite de ses projets d'expertise et de ses missions pour organisations externes, tout en respectant les exigences d'une structure à but non lucratif (bailleurs, impact social, bénéficiaires, redevabilité).
 
 ---
 
