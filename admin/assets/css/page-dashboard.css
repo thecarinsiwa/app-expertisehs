@@ -53,3 +53,29 @@
 .dashboard-section-card .table td { vertical-align: middle; }
 .dashboard-section-card .table tbody tr:hover { background: #f8fafc; }
 .dashboard-section-card .badge { font-size: 0.7rem; }
+
+/* Dark mode - Dashboard */
+[data-theme="dark"] .dashboard-welcome {
+    background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #1e3a5f 100%);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+[data-theme="dark"] .dashboard-metric-card {
+    background: #1e293b;
+    border-color: #334155;
+}
+[data-theme="dark"] .dashboard-metric-card:hover { border-color: #475569; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+[data-theme="dark"] .dashboard-metric-card .metric-value { color: #f1f5f9; }
+[data-theme="dark"] .dashboard-metric-card .metric-label,
+[data-theme="dark"] .dashboard-metric-card .metric-sub { color: #94a3b8; }
+[data-theme="dark"] .dashboard-metric-card .icon-wrap.icon-teal { background: #1e3a5f; color: #93c5fd; }
+[data-theme="dark"] .dashboard-metric-card .icon-wrap.icon-orange { background: #422006; color: #fcd34d; }
+[data-theme="dark"] .dashboard-metric-card .icon-wrap.icon-blue { background: #1e3a5f; color: #93c5fd; }
+[data-theme="dark"] .dashboard-metric-card .icon-wrap.icon-green { background: #064e3b; color: #6ee7b7; }
+[data-theme="dark"] .dashboard-quick-links .card { background: #1e293b; border-color: #334155; }
+[data-theme="dark"] .dashboard-quick-links .card:hover { border-color: #60a5fa; }
+[data-theme="dark"] .dashboard-quick-links a { color: #e2e8f0; }
+[data-theme="dark"] .dashboard-quick-links a:hover { color: #93c5fd; }
+[data-theme="dark"] .dashboard-quick-links .quick-icon { background: #1e3a5f; color: #93c5fd; }
+[data-theme="dark"] .dashboard-section-card { background: #1e293b; border-color: #334155; }
+[data-theme="dark"] .dashboard-section-card .card-header { background: #0f172a; border-color: #334155; color: #f1f5f9; }
+[data-theme="dark"] .dashboard-section-card .table tbody tr:hover { background: #334155; }
