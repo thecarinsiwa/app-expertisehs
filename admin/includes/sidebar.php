@@ -229,10 +229,19 @@ $sections = [
             <?php endif; ?>
         <?php endforeach; ?>
     </nav>
+    <div class="theme-select d-flex align-items-center justify-content-between px-3 py-2 border-top border-secondary border-opacity-25">
+        <span class="small text-muted">Thème</span>
+        <div class="btn-group btn-group-sm" role="group" aria-label="Mode clair / sombre">
+            <input type="radio" class="btn-check" name="themeToggle" id="themeLight" value="light" autocomplete="off">
+            <label class="btn btn-outline-secondary theme-btn" for="themeLight" title="Mode clair"><i class="bi bi-sun"></i></label>
+            <input type="radio" class="btn-check" name="themeToggle" id="themeDark" value="dark" autocomplete="off">
+            <label class="btn btn-outline-secondary theme-btn" for="themeDark" title="Mode sombre"><i class="bi bi-moon"></i></label>
+        </div>
+    </div>
     <div class="lang-select">
         <div class="input-group">
-            <span class="input-group-text bg-white border-end-0"><i class="bi bi-globe text-muted"></i></span>
-            <select class="form-select border-start-0" aria-label="Langue">
+            <span class="input-group-text bg-white border-end-0 input-group-text-theme"><i class="bi bi-globe text-muted"></i></span>
+            <select class="form-select border-start-0 form-select-theme" aria-label="Langue">
                 <option value="fr">Fr</option>
                 <option value="en">Eng</option>
             </select>

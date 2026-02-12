@@ -28,6 +28,25 @@
         if (window.innerWidth >= 992) closeSidebar();
     });
 })();
+
+(function () {
+    var STORAGE_KEY = 'expertisehs-theme';
+    var lightRadio = document.getElementById('themeLight');
+    var darkRadio = document.getElementById('themeDark');
+    function getStored() { return localStorage.getItem(STORAGE_KEY) || 'light'; }
+    function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme === 'dark' ? 'dark' : 'light');
+        if (lightRadio) lightRadio.checked = (theme !== 'dark');
+        if (darkRadio) darkRadio.checked = (theme === 'dark');
+    }
+    function setTheme(theme) {
+        localStorage.setItem(STORAGE_KEY, theme);
+        applyTheme(theme);
+    }
+    applyTheme(getStored());
+    if (lightRadio) lightRadio.addEventListener('change', function () { if (this.checked) setTheme('light'); });
+    if (darkRadio) darkRadio.addEventListener('change', function () { if (this.checked) setTheme('dark'); });
+})();
 </script>
 <?php
 if (!empty($page_scripts)) {
