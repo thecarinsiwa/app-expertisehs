@@ -1,0 +1,161 @@
+/**
+ * Layout et thème commun - Admin ExpertiseHS
+ * Réutilisé sur toutes les pages admin.
+ */
+/* Charte Expertise Humanitaire et Sociale (logo) : bleu indigo + jaune doré */
+:root {
+    --sidebar-bg: #f8f9fa;
+    --primary: #1a365d;
+    --primary-light: #2c5282;
+    --accent-gold: #d69e2e;
+    --accent-gold-light: #faf089;
+    --accent-green: #10b981;
+    --text-muted: #6b7280;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f1f5f9;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-height: 100vh;
+    background: var(--sidebar-bg);
+    border-right: 1px solid #e5e7eb;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1030;
+    width: 260px;
+    overflow: hidden;
+}
+.sidebar .logo-wrap { flex-shrink: 0; }
+.sidebar .search-wrap { flex-shrink: 0; }
+.sidebar .nav-section {
+    flex: 1 1 0;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+.sidebar .lang-select { flex-shrink: 0; }
+.sidebar .logo-wrap { padding: 1.25rem; border-bottom: 1px solid #e5e7eb; }
+.sidebar .logo-title { font-weight: 700; font-size: 1rem; color: #111; }
+.sidebar .logo-sub { font-size: 0.75rem; color: var(--text-muted); }
+.sidebar .search-wrap { padding: 1rem; }
+.sidebar .search-wrap .form-control { border-radius: 8px; background: #fff; border: 1px solid #e5e7eb; }
+.sidebar .nav-section { padding: 0.5rem 0 1.25rem 0; }
+.sidebar .nav-section-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    padding: 0.5rem 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+.sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 1.25rem;
+    color: #374151;
+    border-radius: 0;
+    border-left: 3px solid transparent;
+}
+.sidebar .nav-link:hover { background: #f3f4f6; color: #111; }
+.sidebar .nav-link.active { background: #ebf8ff; color: var(--primary); border-left-color: var(--primary); }
+.sidebar .nav-link i { font-size: 1.1rem; width: 1.25rem; text-align: center; }
+.sidebar .nav-link-toggle { text-decoration: none; cursor: pointer; font-family: inherit; }
+.sidebar .nav-link-toggle:focus { outline: none; box-shadow: none; }
+.sidebar .collapse { transition: height 0.2s ease-out; }
+/* Chevron : droite (fermé) → bas (ouvert) au clic */
+.sidebar .sidebar-chevron { font-size: 0.75rem; transition: transform 0.2s ease; flex-shrink: 0; opacity: 0.8; }
+.sidebar .sidebar-group:has(.collapse.show) .sidebar-chevron { transform: rotate(90deg); }
+.sidebar .sidebar-group { border-left: 3px solid transparent; }
+.sidebar .sidebar-group .nav-link.active { border-left-color: var(--primary); }
+
+/* Sous-menus */
+.sidebar .sidebar-sub {
+    padding: 0.35rem 0 0.5rem 0;
+    margin-left: 0;
+    background: transparent;
+    border-left: none;
+    border-top: 1px solid #e5e7eb;
+}
+.sidebar .sidebar-sub-link {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1.25rem 0.5rem 2.5rem;
+    font-size: 0.8125rem;
+    line-height: 1.35;
+    color: #4b5563;
+    text-decoration: none;
+    border-left: 3px solid transparent;
+    transition: background 0.15s ease, color 0.15s ease;
+    position: relative;
+}
+.sidebar .sidebar-sub-link::before {
+    content: '';
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #9ca3af;
+    opacity: 0.6;
+}
+.sidebar .sidebar-sub-link:hover {
+    background: #f1f5f9;
+    color: #111;
+}
+.sidebar .sidebar-sub-link:hover::before { background: #6b7280; opacity: 1; }
+.sidebar .sidebar-sub-link.active {
+    background: #ebf8ff;
+    color: var(--primary);
+    font-weight: 600;
+    border-left-color: var(--primary);
+}
+.sidebar .sidebar-sub-link.active::before {
+    background: var(--primary);
+    opacity: 1;
+    width: 5px;
+    height: 5px;
+    left: 1.375rem;
+}
+.sidebar .badge-new { background: var(--accent-gold); color: #fff; font-size: 0.65rem; padding: 0.15rem 0.4rem; border-radius: 999px; }
+.sidebar .lang-select { padding: 1rem 1.25rem; border-top: 1px solid #e5e7eb; }
+.sidebar .lang-select .form-select { border-radius: 8px; font-size: 0.9rem; }
+
+/* Main content */
+.main-content { margin-left: 260px; padding: 1.5rem; min-height: 100vh; }
+
+@media (max-width: 991.98px) {
+    .sidebar { transform: translateX(-100%); width: 280px; }
+    .sidebar.show { transform: translateX(0); }
+    .main-content { margin-left: 0; }
+}
+
+/* Page header (réutilisable) */
+.page-header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 1.5rem; }
+.page-title { font-size: 1.5rem; font-weight: 700; color: #111; margin: 0; }
+
+/* Boutons thème (bleu indigo logo) */
+.btn-teal { background: var(--primary); color: #fff; border: none; }
+.btn-teal:hover { background: var(--primary-light); color: #fff; }
+.btn-outline-teal { border: 1px solid var(--primary); color: var(--primary); background: transparent; }
+.btn-outline-teal:hover { background: var(--primary); color: #fff; }
+
+/* Sidebar mobile */
+.navbar-toggler-sidebar { display: none; }
+@media (max-width: 991.98px) {
+    .navbar-toggler-sidebar { display: inline-flex; position: fixed; top: 1rem; left: 1rem; z-index: 1040; }
+}
+.sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 1025; }
+.sidebar-overlay.show { display: block; }
