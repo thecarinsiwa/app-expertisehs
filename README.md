@@ -57,10 +57,12 @@ En résumé, ExpertiseHS (Expertise Humanitaire et Sociale) accompagne l'organis
 
 ## Base de données
 
-Le schéma est défini dans `database/schema.sql` :
+Deux schémas sont disponibles dans `database/` :
 
-- **Moteur** : PostgreSQL
-- **Clés primaires** : UUID
+- **`schema.sql`** : PostgreSQL (référence)
+- **`schema.mysql.sql`** : MySQL 5.7+ / 8+ — utilisé par l’API PHP
+
+- **Clés primaires** : UUID (généré par l’API en PHP pour MySQL)
 - **Langue** : anglais (tables et colonnes)
 
 ---
