@@ -1,0 +1,65 @@
+/**
+ * Styles spécifiques à la page Customers details (détail client, métriques, docs)
+ */
+.customer-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+.customer-avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; }
+.customer-name { font-size: 1.35rem; font-weight: 700; color: #111; margin-bottom: 0.25rem; }
+.badge-new-customer { background: #d1fae5; color: #059669; font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 6px; }
+.customer-meta { color: var(--text-muted); font-size: 0.9rem; }
+.customer-meta strong { color: #374151; }
+.representative { text-align: right; }
+.representative .rep-avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+.representative .rep-name { font-weight: 600; color: #111; font-size: 0.9rem; }
+.representative .rep-role { font-size: 0.8rem; color: var(--text-muted); }
+
+.metric-card {
+    background: #fff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    padding: 1.25rem;
+    height: 100%;
+}
+.metric-card .icon-wrap { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; }
+.metric-card .icon-orange { background: #fefcbf; color: var(--accent-gold); }
+.metric-card .icon-teal { background: #ebf8ff; color: var(--primary); }
+.metric-card .icon-red { background: #fee2e2; color: #dc2626; }
+.metric-card .value-accepted { color: var(--accent-green); font-weight: 700; font-size: 1.25rem; }
+.metric-card .value-pending { color: var(--accent-gold); font-weight: 600; font-size: 1rem; }
+.metric-card .trend { font-size: 0.8rem; color: var(--accent-green); }
+.metric-card-overdue {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #fff;
+    border: none;
+}
+.metric-card-overdue .metric-value { font-size: 1.5rem; font-weight: 700; }
+
+.doc-tabs .nav-link { color: #374151; font-weight: 500; border: none; border-bottom: 3px solid transparent; padding: 0.75rem 1rem; }
+.doc-tabs .nav-link:hover { color: var(--primary); }
+.doc-tabs .nav-link.active { color: var(--primary); border-bottom-color: var(--primary); background: transparent; }
+.doc-toolbar { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 1rem; }
+.doc-toolbar .form-control { border-radius: 8px; max-width: 280px; }
+.doc-toolbar .btn-sort { border: 1px solid #e5e7eb; background: #fff; color: #374151; border-radius: 8px; }
+.table-docs { background: #fff; border-radius: 12px; border: 1px solid #e5e7eb; overflow: hidden; }
+.table-docs thead { background: #f8fafc; }
+.table-docs th { font-weight: 600; color: #374151; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; padding: 0.9rem 1rem; border-bottom: 1px solid #e5e7eb; }
+.table-docs td { padding: 0.9rem 1rem; vertical-align: middle; }
+.table-docs tbody tr:hover { background: #f8fafc; }
+.doc-cell { display: flex; align-items: center; gap: 0.75rem; }
+.doc-cell .doc-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+.doc-id { font-weight: 600; color: #111; }
+.doc-email { font-size: 0.85rem; color: var(--text-muted); }
+.status-badge { font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 999px; font-weight: 500; }
+.status-accepted { background: #d1fae5; color: #059669; }
+.status-overdue { background: #fee2e2; color: #dc2626; }
+.status-pending { background: #fefcbf; color: #b7791f; }
+.btn-edit-sm { padding: 0.25rem 0.6rem; font-size: 0.8rem; border-radius: 6px; }
