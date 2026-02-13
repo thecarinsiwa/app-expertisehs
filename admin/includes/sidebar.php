@@ -2,178 +2,94 @@
 /**
  * Barre latérale - Modules ExpertiseHS
  * $active_menu : clé du module actif (ex: 'dashboard', 'projects', 'funding').
- * $active_sub  : (optionnel) nom du fichier vue actif (ex: 'projects_view') pour surligner le lien.
  */
 $active = isset($active_menu) ? $active_menu : '';
-$active_sub = isset($active_sub) ? $active_sub : '';
 
-// Ordre et libellés alignés sur les modules fonctionnels ExpertiseHS (README)
+// Ordre et libellés alignés sur les modules fonctionnels ExpertiseHS — liens vers index.php de chaque module
 $sections = [
     [
         'id' => 'dashboard',
         'icon' => 'bi-house-door',
         'label' => 'Tableau de bord',
         'href' => $admin_base . 'index.php',
-        'items' => null,
     ],
     [
         'id' => 'projects',
         'icon' => 'bi-briefcase',
         'label' => 'Projets d\'expertise',
-        'items' => [
-            ['view' => 'projects_view', 'label' => 'Projets'],
-            ['view' => 'expertise_domains_view', 'label' => 'Domaines d\'expertise'],
-            ['view' => 'project_phases_view', 'label' => 'Phases'],
-            ['view' => 'deliverables_view', 'label' => 'Livrables'],
-            ['view' => 'project_zones_view', 'label' => 'Zones projet'],
-        ],
-        'folder' => 'projects',
+        'href' => $admin_base . 'projects/index.php',
     ],
     [
         'id' => 'missions',
         'icon' => 'bi-airplane',
         'label' => 'Missions d\'expertise',
-        'items' => [
-            ['view' => 'expertise_missions_view', 'label' => 'Missions'],
-            ['view' => 'mission_participants_view', 'label' => 'Participants'],
-            ['view' => 'mission_activities_view', 'label' => 'Activités'],
-            ['view' => 'mission_deliverables_view', 'label' => 'Livrables'],
-        ],
-        'folder' => 'missions',
+        'href' => $admin_base . 'missions/index.php',
     ],
     [
         'id' => 'organizational',
         'icon' => 'bi-building',
         'label' => 'Entités organisationnelles',
-        'items' => [
-            ['view' => 'organizations_view', 'label' => 'Organisations'],
-            ['view' => 'structures_view', 'label' => 'Structures'],
-            ['view' => 'departments_view', 'label' => 'Départements'],
-            ['view' => 'institutional_partners_view', 'label' => 'Partenaires institutionnels'],
-        ],
-        'folder' => 'organizational',
+        'href' => $admin_base . 'organizational/index.php',
     ],
     [
         'id' => 'stakeholders',
         'icon' => 'bi-people',
         'label' => 'Parties prenantes',
-        'items' => [
-            ['view' => 'beneficiaries_view', 'label' => 'Bénéficiaires'],
-            ['view' => 'local_contacts_view', 'label' => 'Contacts locaux'],
-            ['view' => 'local_partner_institutions_view', 'label' => 'Institutions partenaires locales'],
-            ['view' => 'target_communities_view', 'label' => 'Communautés cibles'],
-        ],
-        'folder' => 'stakeholders',
+        'href' => $admin_base . 'stakeholders/index.php',
     ],
     [
         'id' => 'hr',
         'icon' => 'bi-person-badge',
         'label' => 'Ressources humaines',
-        'items' => [
-            ['view' => 'employees_view', 'label' => 'Employés'],
-            ['view' => 'experts_view', 'label' => 'Experts'],
-            ['view' => 'skills_view', 'label' => 'Compétences'],
-            ['view' => 'expert_skills_view', 'label' => 'Compétences experts'],
-            ['view' => 'project_roles_view', 'label' => 'Rôles projet'],
-        ],
-        'folder' => 'hr',
+        'href' => $admin_base . 'hr/index.php',
     ],
     [
         'id' => 'funding',
         'icon' => 'bi-currency-dollar',
         'label' => 'Financement et budget',
-        'items' => [
-            ['view' => 'donors_view', 'label' => 'Bailleurs'],
-            ['view' => 'funding_contracts_view', 'label' => 'Contrats de financement'],
-            ['view' => 'project_budgets_view', 'label' => 'Budgets projet'],
-            ['view' => 'budget_lines_view', 'label' => 'Lignes budgétaires'],
-        ],
-        'folder' => 'funding',
+        'href' => $admin_base . 'funding/index.php',
     ],
     [
         'id' => 'zones',
         'icon' => 'bi-geo-alt',
         'label' => 'Zones d\'intervention',
-        'items' => [
-            ['view' => 'countries_view', 'label' => 'Pays'],
-            ['view' => 'regions_view', 'label' => 'Régions'],
-            ['view' => 'cities_view', 'label' => 'Villes'],
-            ['view' => 'priority_zones_view', 'label' => 'Zones prioritaires'],
-        ],
-        'folder' => 'zones',
+        'href' => $admin_base . 'zones/index.php',
     ],
     [
         'id' => 'governance',
         'icon' => 'bi-diagram-3',
         'label' => 'Gouvernance',
-        'items' => [
-            ['view' => 'steering_committees_view', 'label' => 'Comités de pilotage'],
-            ['view' => 'steering_committee_members_view', 'label' => 'Membres'],
-            ['view' => 'meetings_view', 'label' => 'Réunions'],
-            ['view' => 'decisions_view', 'label' => 'Décisions'],
-            ['view' => 'progress_points_view', 'label' => 'Points d\'avancement'],
-        ],
-        'folder' => 'governance',
+        'href' => $admin_base . 'governance/index.php',
     ],
     [
         'id' => 'impact',
         'icon' => 'bi-graph-up',
         'label' => 'Impact et évaluation',
-        'items' => [
-            ['view' => 'result_indicators_view', 'label' => 'Indicateurs de résultat'],
-            ['view' => 'indicator_measurements_view', 'label' => 'Mesures indicateurs'],
-            ['view' => 'impact_reports_view', 'label' => 'Rapports d\'impact'],
-            ['view' => 'project_evaluations_view', 'label' => 'Évaluations projet'],
-            ['view' => 'testimonials_view', 'label' => 'Témoignages'],
-        ],
-        'folder' => 'impact',
+        'href' => $admin_base . 'impact/index.php',
     ],
     [
         'id' => 'knowledge',
         'icon' => 'bi-journal-bookmark',
         'label' => 'Gestion des connaissances',
-        'items' => [
-            ['view' => 'documentary_resources_view', 'label' => 'Ressources documentaires'],
-            ['view' => 'best_practices_view', 'label' => 'Bonnes pratiques'],
-            ['view' => 'lessons_learned_view', 'label' => 'Leçons apprises'],
-            ['view' => 'model_library_view', 'label' => 'Bibliothèque de modèles'],
-        ],
-        'folder' => 'knowledge',
+        'href' => $admin_base . 'knowledge/index.php',
     ],
     [
         'id' => 'communication',
         'icon' => 'bi-megaphone',
         'label' => 'Communication',
-        'items' => [
-            ['view' => 'news_view', 'label' => 'Actualités'],
-            ['view' => 'publications_view', 'label' => 'Publications'],
-            ['view' => 'media_view', 'label' => 'Médias'],
-            ['view' => 'newsletters_view', 'label' => 'Newsletters'],
-        ],
-        'folder' => 'communication',
+        'href' => $admin_base . 'communication/index.php',
     ],
     [
         'id' => 'logistic',
         'icon' => 'bi-box-seam',
         'label' => 'Logistique',
-        'items' => [
-            ['view' => 'flight_tickets_view', 'label' => 'Billets d\'avion'],
-            ['view' => 'accommodations_view', 'label' => 'Hébergements'],
-            ['view' => 'equipment_view', 'label' => 'Équipements'],
-        ],
-        'folder' => 'logistic',
+        'href' => $admin_base . 'logistic/index.php',
     ],
     [
         'id' => 'admin',
         'icon' => 'bi-gear',
         'label' => 'Administration',
-        'items' => [
-            ['view' => 'users_view', 'label' => 'Utilisateurs'],
-            ['view' => 'access_profiles_view', 'label' => 'Profils d\'accès'],
-            ['view' => 'activity_log_view', 'label' => 'Journal d\'activité'],
-            ['view' => 'configurations_view', 'label' => 'Configurations'],
-        ],
-        'folder' => 'admin',
+        'href' => $admin_base . 'admin/index.php',
     ],
 ];
 ?>
@@ -184,7 +100,7 @@ $sections = [
 
 <aside class="sidebar" id="sidebar">
     <div class="logo-wrap">
-        <div class="logo-title">ExpertiseHS</div>
+        <div class="logo-title">Expertise Humanitaire et Sociale</div>
         <div class="logo-sub">Administration</div>
     </div>
     <div class="search-wrap">
@@ -196,37 +112,10 @@ $sections = [
     <nav class="nav-section">
         <div class="nav-section-title">Menu</div>
         <?php foreach ($sections as $section): ?>
-            <?php if (empty($section['items'])): ?>
-                <a class="nav-link <?php echo ($section['id'] === $active) ? 'active' : ''; ?>" href="<?php echo htmlspecialchars($section['href']); ?>">
-                    <i class="bi <?php echo htmlspecialchars($section['icon']); ?>"></i>
-                    <?php echo htmlspecialchars($section['label']); ?>
-                </a>
-            <?php else: ?>
-                <?php
-                $collapse_id = 'collapse-' . $section['id'];
-                $is_active_section = ($section['id'] === $active);
-                ?>
-                <div class="sidebar-group">
-                    <button type="button" class="nav-link nav-link-toggle w-100 text-start border-0 bg-transparent <?php echo $is_active_section ? 'active' : ''; ?>" data-bs-toggle="collapse" data-bs-target="#<?php echo $collapse_id; ?>" aria-expanded="<?php echo $is_active_section ? 'true' : 'false'; ?>" aria-controls="<?php echo $collapse_id; ?>">
-                        <i class="bi <?php echo htmlspecialchars($section['icon']); ?>"></i>
-                        <span><?php echo htmlspecialchars($section['label']); ?></span>
-                        <i class="bi bi-chevron-right sidebar-chevron ms-auto" aria-hidden="true"></i>
-                    </button>
-                    <div class="collapse <?php echo $is_active_section ? 'show' : ''; ?>" id="<?php echo $collapse_id; ?>">
-                        <div class="sidebar-sub">
-                            <?php foreach ($section['items'] as $item): ?>
-                                <?php
-                                $item_href = $admin_base . $section['folder'] . '/' . $item['view'] . '.php';
-                                $is_active_item = ($section['id'] === $active && $active_sub === $item['view']);
-                                ?>
-                                <a class="sidebar-sub-link <?php echo $is_active_item ? 'active' : ''; ?>" href="<?php echo htmlspecialchars($item_href); ?>">
-                                    <?php echo htmlspecialchars($item['label']); ?>
-                                </a>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                </div>
-            <?php endif; ?>
+            <a class="nav-link <?php echo ($section['id'] === $active) ? 'active' : ''; ?>" href="<?php echo htmlspecialchars($section['href']); ?>">
+                <i class="bi <?php echo htmlspecialchars($section['icon']); ?>"></i>
+                <?php echo htmlspecialchars($section['label']); ?>
+            </a>
         <?php endforeach; ?>
     </nav>
     <div class="theme-select d-flex align-items-center justify-content-between px-3 py-2 border-top border-secondary border-opacity-25">
