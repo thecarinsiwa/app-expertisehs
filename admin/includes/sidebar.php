@@ -247,4 +247,9 @@ $sections = [
             </select>
         </div>
     </div>
+    <div class="sidebar-logout px-3 pb-3">
+        <a href="<?php echo htmlspecialchars($admin_base . 'logout.php'); ?>" class="btn btn-outline-danger btn-sm w-100">
+            <i class="bi bi-box-arrow-right me-1"></i> Déconnexion
+        </a>
+    </div>
 </aside>

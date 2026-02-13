@@ -1,0 +1,168 @@
+/**
+ * Pages d'authentification (login, register) - même structure que admin
+ * Utilisé avec layout_start_auth / layout_end_auth (admin.css chargé avant).
+ */
+.auth-page {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+}
+[data-theme="dark"] .auth-card {
+    background: #1e293b;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.auth-brand {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.auth-brand .auth-logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--secondary);
+    letter-spacing: -0.02em;
+}
+[data-theme="dark"] .auth-brand .auth-logo { color: #93c5fd; }
+
+.auth-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111;
+    margin: 0 0 0.35rem 0;
+}
+[data-theme="dark"] .auth-title { color: #f1f5f9; }
+
+.auth-subtitle {
+    font-size: 0.95rem;
+    color: #6b7280;
+    margin: 0 0 1.75rem 0;
+}
+[data-theme="dark"] .auth-subtitle { color: #94a3b8; }
+
+.auth-card .form-label {
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #374151;
+    margin-bottom: 0.4rem;
+}
+[data-theme="dark"] .auth-card .form-label { color: #e2e8f0; }
+
+.auth-card .form-control {
+    border-radius: 10px;
+    padding: 0.65rem 0.9rem;
+    border: 1px solid #e5e7eb;
+    font-size: 0.95rem;
+}
+.auth-card .form-control::placeholder { color: #9ca3af; }
+[data-theme="dark"] .auth-card .form-control {
+    background: #1e293b;
+    border-color: #334155;
+    color: #f1f5f9;
+}
+[data-theme="dark"] .auth-card .form-control::placeholder { color: #64748b; }
+
+.auth-row-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.4rem;
+}
+.auth-row-label .form-label { margin-bottom: 0; }
+.auth-forgot {
+    font-size: 0.875rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+.auth-forgot:hover { color: var(--primary-light); text-decoration: underline; }
+[data-theme="dark"] .auth-forgot { color: var(--primary-light); }
+
+.auth-card .btn-login,
+.auth-card button.btn-login {
+    width: 100%;
+    background-color: var(--secondary) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 10px;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.auth-card .btn-login:hover,
+.auth-card button.btn-login:hover { background-color: var(--secondary-light) !important; color: #fff !important; }
+
+.auth-card .btn-google {
+    width: 100%;
+    background: #fff;
+    color: #374151;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 0.65rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.auth-card .btn-google:hover { background: #f9fafb; border-color: #d1d5db; color: #111; }
+[data-theme="dark"] .auth-card .btn-google {
+    background: #1e293b;
+    border-color: #334155;
+    color: #e2e8f0;
+}
+[data-theme="dark"] .auth-card .btn-google:hover { background: #334155; }
+
+.auth-divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.25rem 0;
+    color: #9ca3af;
+    font-size: 0.8rem;
+}
+.auth-divider::before,
+.auth-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #e5e7eb;
+}
+[data-theme="dark"] .auth-divider::before,
+[data-theme="dark"] .auth-divider::after { background: #334155; }
+
+.auth-footer {
+    text-align: center;
+    margin-top: 1.75rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+[data-theme="dark"] .auth-footer { color: #94a3b8; }
+.auth-footer a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+.auth-footer a:hover { text-decoration: underline; }
+[data-theme="dark"] .auth-footer a { color: var(--primary-light); }
+
+.auth-card .alert { border-radius: 10px; margin-bottom: 1rem; }
+.auth-card .form-text { font-size: 0.8rem; margin-top: 0.25rem; }

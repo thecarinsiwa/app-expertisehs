@@ -9,6 +9,7 @@
  *   $page_styles  : HTML additionnel (balises <link> ou <style>) pour cette page
  */
 require __DIR__ . '/env.php';
+require __DIR__ . '/auth_check.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">

@@ -2,9 +2,9 @@
  * Styles du tableau de bord ExpertiseHS
  */
 .dashboard-welcome {
-    background: linear-gradient(135deg, #1a365d 0%, #2c5282 50%, #1a365d 100%);
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
     color: #fff;
-    border-radius: 12px;
+    border-radius: 10px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border: none;
@@ -24,8 +24,8 @@
 .dashboard-metric-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); border-color: #d1d5db; }
 .dashboard-metric-card .icon-wrap { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; margin-bottom: 0.75rem; }
 .dashboard-metric-card .icon-wrap.icon-teal { background: #ebf8ff; color: var(--primary); }
-.dashboard-metric-card .icon-wrap.icon-orange { background: #fefcbf; color: var(--accent-gold); }
-.dashboard-metric-card .icon-wrap.icon-blue { background: #ebf8ff; color: var(--primary-light); }
+.dashboard-metric-card .icon-wrap.icon-orange { background: #fefcbf; color: var(--primary); }
+.dashboard-metric-card .icon-wrap.icon-blue { background: #ebf8ff; color: var(--secondary-light); }
 .dashboard-metric-card .icon-wrap.icon-green { background: #e6fffa; color: #0d9488; }
 .dashboard-metric-card .metric-label { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.25rem; }
 .dashboard-metric-card .metric-value { font-size: 1.75rem; font-weight: 700; color: #111; }
@@ -34,7 +34,7 @@
 
 .dashboard-quick-links { margin-bottom: 1.5rem; }
 .dashboard-quick-links .card { border-radius: 12px; border: 1px solid #e5e7eb; transition: border-color 0.2s, box-shadow 0.2s; }
-.dashboard-quick-links .card:hover { border-color: var(--primary); box-shadow: 0 4px 12px rgba(26, 54, 93, 0.15); }
+.dashboard-quick-links .card:hover { border-color: var(--primary); box-shadow: 0 4px 12px rgba(214, 158, 46, 0.2); }
 .dashboard-quick-links .card-body { padding: 1rem 1.25rem; }
 .dashboard-quick-links a { text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.75rem; }
 .dashboard-quick-links a:hover { color: var(--primary); }
@@ -56,7 +56,7 @@
 
 /* Dark mode - Dashboard */
 [data-theme="dark"] .dashboard-welcome {
-    background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 50%, #1e3a5f 100%);
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
     box-shadow: 0 2px 12px rgba(0,0,0,0.3);
 }
 [data-theme="dark"] .dashboard-metric-card {
@@ -67,15 +67,15 @@
 [data-theme="dark"] .dashboard-metric-card .metric-value { color: #f1f5f9; }
 [data-theme="dark"] .dashboard-metric-card .metric-label,
 [data-theme="dark"] .dashboard-metric-card .metric-sub { color: #94a3b8; }
-[data-theme="dark"] .dashboard-metric-card .icon-wrap.icon-teal { background: #1e3a5f; color: #93c5fd; }
-[data-theme="dark"] .dashboard-metric-card .icon-wrap.icon-orange { background: #422006; color: #fcd34d; }
-[data-theme="dark"] .dashboard-metric-card .icon-wrap.icon-blue { background: #1e3a5f; color: #93c5fd; }
+[data-theme="dark"] .dashboard-metric-card .icon-wrap.icon-teal { background: rgba(214, 158, 46, 0.25); color: var(--primary-light); }
+[data-theme="dark"] .dashboard-metric-card .icon-wrap.icon-orange { background: rgba(214, 158, 46, 0.25); color: var(--primary-light); }
+[data-theme="dark"] .dashboard-metric-card .icon-wrap.icon-blue { background: rgba(26, 54, 93, 0.5); color: #93c5fd; }
 [data-theme="dark"] .dashboard-metric-card .icon-wrap.icon-green { background: #064e3b; color: #6ee7b7; }
 [data-theme="dark"] .dashboard-quick-links .card { background: #1e293b; border-color: #334155; }
-[data-theme="dark"] .dashboard-quick-links .card:hover { border-color: #60a5fa; }
+[data-theme="dark"] .dashboard-quick-links .card:hover { border-color: var(--primary); }
 [data-theme="dark"] .dashboard-quick-links a { color: #e2e8f0; }
-[data-theme="dark"] .dashboard-quick-links a:hover { color: #93c5fd; }
-[data-theme="dark"] .dashboard-quick-links .quick-icon { background: #1e3a5f; color: #93c5fd; }
+[data-theme="dark"] .dashboard-quick-links a:hover { color: var(--primary-light); }
+[data-theme="dark"] .dashboard-quick-links .quick-icon { background: rgba(214, 158, 46, 0.25); color: var(--primary-light); }
 [data-theme="dark"] .dashboard-section-card { background: #1e293b; border-color: #334155; }
 [data-theme="dark"] .dashboard-section-card .card-header { background: #0f172a; border-color: #334155; color: #f1f5f9; }
 [data-theme="dark"] .dashboard-section-card .table tbody tr:hover { background: #334155; }
