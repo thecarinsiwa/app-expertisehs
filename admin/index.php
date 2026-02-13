@@ -15,11 +15,12 @@ require __DIR__ . '/includes/layout_start.php';
     <h1 class="page-title">Tableau de bord</h1>
     <div class="d-flex flex-wrap align-items-center gap-2">
         <div class="input-group flex-nowrap" style="max-width: 220px;">
-            <span class="input-group-text bg-white"><i class="bi bi-calendar3 text-muted"></i></span>
-            <input type="text" class="form-control" value="<?php echo date('d/m/Y'); ?>" readonly aria-label="Date">
+            <span class="input-group-text bg-white input-group-text-theme"><i class="bi bi-calendar3 text-muted"></i></span>
+            <input type="text" class="form-control form-control-theme" value="<?php echo date('d/m/Y'); ?>" readonly aria-label="Date">
         </div>
         <a href="<?php echo $admin_base; ?>projects/projects_view.php" class="btn btn-outline-teal btn-sm"><i class="bi bi-briefcase me-1"></i> Voir les projets</a>
         <a href="<?php echo $admin_base; ?>missions/expertise_missions_view.php" class="btn btn-teal btn-sm"><i class="bi bi-airplane me-1"></i> Voir les missions</a>
+        <?php require __DIR__ . '/includes/user_header_block.php'; ?>
     </div>
 </header>
 

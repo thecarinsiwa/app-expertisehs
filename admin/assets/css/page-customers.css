@@ -30,14 +30,14 @@
     height: 100%;
 }
 .metric-card .icon-wrap { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; }
-.metric-card .icon-orange { background: #fefcbf; color: var(--accent-gold); }
-.metric-card .icon-teal { background: #ebf8ff; color: var(--primary); }
+.metric-card .icon-orange { background: #fefcbf; color: var(--primary); }
+.metric-card .icon-teal { background: #ebf8ff; color: var(--secondary); }
 .metric-card .icon-red { background: #fee2e2; color: #dc2626; }
 .metric-card .value-accepted { color: var(--accent-green); font-weight: 700; font-size: 1.25rem; }
-.metric-card .value-pending { color: var(--accent-gold); font-weight: 600; font-size: 1rem; }
+.metric-card .value-pending { color: var(--primary); font-weight: 600; font-size: 1rem; }
 .metric-card .trend { font-size: 0.8rem; color: var(--accent-green); }
 .metric-card-overdue {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
     color: #fff;
     border: none;
 }

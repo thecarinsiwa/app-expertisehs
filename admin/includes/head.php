@@ -18,4 +18,7 @@ $layout_title = isset($page_title) ? $page_title : 'Dashboard';
 if (!empty($page_styles)) {
     echo $page_styles;
 }
+if (!empty($head_extra)) {
+    echo $head_extra;
+}
 ?>

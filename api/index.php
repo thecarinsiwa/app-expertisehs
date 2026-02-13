@@ -112,6 +112,21 @@ if (empty($segments) && $method === 'GET') {
 $table = $segments[0];
 $id = $segments[1] ?? null;
 
+if ($table === 'auth') {
+    $action = $segments[1] ?? '';
+    if (!in_array($action, ['login', 'register', 'forgot-password'], true)) {
+        sendJson(404, ['error' => 'Auth action not found']);
+    }
+    require __DIR__ . '/includes/AuthHandler.php';
+    try {
+        $pdo = Db::getConnection();
+        authHandle($pdo, $action, $method, getJsonInput());
+    } catch (PDOException $e) {
+        sendJson(503, ['error' => 'Database error', 'message' => $e->getMessage()]);
+    }
+    exit;
+}
+
 $limit = isset($_GET['limit']) ? max(1, min(500, (int) $_GET['limit'])) : 100;
 $offset = isset($_GET['offset']) ? max(0, (int) $_GET['offset']) : 0;
 
