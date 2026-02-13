@@ -56,12 +56,31 @@ class CrudHandler
         return array_values(array_filter($columns, fn($c) => !in_array($c, $skip, true)));
     }
 
+    /** Expose writable column names for admin forms (same as getWritableColumns). */
+    public function getEditableColumnNames(): array
+    {
+        return $this->getWritableColumns();
+    }
+
+    /** Expose all column names (for building table header when no rows). */
+    public function getColumnNames(): array
+    {
+        return $this->getColumns();
+    }
+
     private static function uuid(): string
     {
         $data = random_bytes(16);
         $data[6] = chr(ord($data[6]) & 0x0f | 0x40);
         $data[8] = chr(ord($data[8]) & 0x3f | 0x80);
         return vsprintf('%s%s-%s-%s-%s-%s%s%s', str_split(bin2hex($data), 4));
+    }
+
+    public function count(): int
+    {
+        $t = $this->quoteIdentifier($this->table);
+        $stmt = $this->pdo->query("SELECT COUNT(*) FROM $t");
+        return (int) $stmt->fetchColumn();
     }
 
     public function list(int $limit = 100, int $offset = 0): array
